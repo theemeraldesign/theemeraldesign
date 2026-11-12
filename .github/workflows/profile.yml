@@ -1,0 +1,108 @@
+name: Profile Build
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */12 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate react-icons as SVG files
+        run: |
+          mkdir -p assets/icons
+          npm init -y >/dev/null
+          npm i react react-dom react-icons
+          cat > gen-icons.mjs <<'EOF'
+          import React from "react";
+          import { renderToStaticMarkup } from "react-dom/server";
+          import * as Si from "react-icons/si";
+          import * as Fa from "react-icons/fa6";
+          import fs from "node:fs";
+
+          const icons = {
+            react: ["SiReact", Si, "#61DAFB"],
+            typescript: ["SiTypescript", Si, "#3178C6"],
+            javascript: ["SiJavascript", Si, "#F7DF1E"],
+            python: ["SiPython", Si, "#3776AB"],
+            nextjs: ["SiNextdotjs", Si, "#FFFFFF"],
+            nodejs: ["SiNodedotjs", Si, "#5FA04E"],
+            tailwind: ["SiTailwindcss", Si, "#06B6D4"],
+            vite: ["SiVite", Si, "#646CFF"],
+            html: ["SiHtml5", Si, "#E34F26"],
+            css: ["SiCss3", Si, "#1572B6"],
+            sass: ["SiSass", Si, "#CC6699"],
+            cloudflare: ["SiCloudflare", Si, "#F38020"],
+            vercel: ["SiVercel", Si, "#FFFFFF"],
+            git: ["SiGit", Si, "#F05032"],
+            github: ["SiGithub", Si, "#FFFFFF"],
+            terminal: ["FaTerminal", Fa, "#38BDF8"],
+            handshake: ["FaHandshake", Fa, "#38BDF8"],
+            layers: ["FaLayerGroup", Fa, "#38BDF8"],
+            chart: ["FaChartLine", Fa, "#38BDF8"],
+            code: ["FaCode", Fa, "#38BDF8"],
+            fire: ["FaFire", Fa, "#38BDF8"],
+            trophy: ["FaTrophy", Fa, "#38BDF8"],
+            rocket: ["FaRocket", Fa, "#38BDF8"],
+            project: ["FaDiagramProject", Fa, "#38BDF8"],
+            robot: ["FaRobot", Fa, "#38BDF8"],
+            mail: ["FaEnvelope", Fa, "#38BDF8"],
+            x: ["FaXTwitter", Fa, "#FFFFFF"],
+            link: ["FaLink", Fa, "#38BDF8"],
+          };
+
+          for (const [file, [name, lib, color]] of Object.entries(icons)) {
+            const Icon = lib[name];
+            if (!Icon) { console.warn("Missing " + name); continue; }
+            let svg = renderToStaticMarkup(React.createElement(Icon, { size: 48 }));
+            svg = svg.replace(/currentColor/g, color).replace(/ style="[^"]*"/g, "");
+            if (!svg.includes("xmlns=")) svg = svg.replace("<svg", '<svg xmlns="http://www.w3.org/2000/svg"');
+            fs.writeFileSync("assets/icons/" + file + ".svg", svg);
+          }
+          EOF
+          node gen-icons.mjs
+          rm -rf node_modules package.json package-lock.json gen-icons.mjs
+
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: theemeraldesign
+          outputs: |
+            assets/snake.svg
+            assets/snake-dark.svg?palette=github-dark
+
+      # Runs only if you add the METRICS_TOKEN secret (optional)
+      - name: Generate GitHub stats card
+        if: env.METRICS_TOKEN != ''
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: theemeraldesign
+          template: classic
+          filename: assets/metrics.svg
+          base: header, activity, community, repositories, metadata
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage
+          commit: false
+
+      - name: Commit generated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets
+          git diff --cached --quiet || git commit -m "chore: update profile graphics"
+          git push
+          
