@@ -42,7 +42,7 @@ jobs:
             tailwind: ["SiTailwindcss", Si, "#06B6D4"],
             vite: ["SiVite", Si, "#646CFF"],
             html: ["SiHtml5", Si, "#E34F26"],
-            css: ["SiCss3", Si, "#1572B6"],
+            css: ["FaCss3Alt", Fa, "#1572B6"],
             sass: ["SiSass", Si, "#CC6699"],
             cloudflare: ["SiCloudflare", Si, "#F38020"],
             vercel: ["SiVercel", Si, "#FFFFFF"],
@@ -104,5 +104,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets
           git diff --cached --quiet || git commit -m "chore: update profile graphics"
+          git pull --rebase origin main || true
           git push
           
