@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,50:7c3aed,100:0f172a&height=230&section=header&text=ADEBISI%20ISRAEL&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%C2%B7%20EMERALD%20%C2%B7%20Full%20Stack%20Engineer%20%C2%B7&descSize=20&descAlignY=60" width="100%" alt="Adebisi Israel (Emerald) header"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0ea5e9,50:7c3aed,100:0f172a&height=230&section=header&text=ADEBISI%20ISRAEL&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%C2%B7%20EMERALD%20%C2%B7%20Full%20Stack%20Engineer%20%C2%B7&descSize=20&descAlignY=60" width="100%" alt="Adebisi Israel (Emerald) header"/>
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=1200&color=38BDF8&center=true&vCenter=true&width=700&height=40&lines=Frontend+%2B+Backend+%2B+Edge+%3D+Shipped;Building+products+people+love;TypeScript+%E2%80%A2+React+%E2%80%A2+Cloudflare+%E2%80%A2+AI;Currently+building+a+SaaS" alt="Typing SVG"/>
@@ -10,6 +10,8 @@
 
 <img src="https://komarev.com/ghpvc/?username=theemeraldesign&label=Profile+views&color=0ea5e9&style=flat-square" alt="Profile views"/>
 <img src="https://img.shields.io/badge/Open%20to-Collaboration-22c55e?style=flat-square" alt="Open to collaboration"/>
+<img src="https://img.shields.io/badge/Based%20in-Nigeria-0ea5e9?style=flat-square&logo=googlemaps&logoColor=white" alt="Nigeria"/>
+<img src="https://img.shields.io/badge/Building-SaaS-7c3aed?style=flat-square&logo=rocket&logoColor=white" alt="Building SaaS"/>
 
 </div>
 
@@ -31,6 +33,30 @@ const emerald = {
 - Shipping fast, clean, type-safe products from UI to edge
 - Using AI as a force multiplier in design, code and workflows
 - Always learning in public
+
+## <img src="assets/icons/robot.svg" width="24" align="center"/> How I Build
+
+```mermaid
+flowchart LR
+  A([Idea]) --> B[Design]
+  B --> C[React + TypeScript]
+  C --> D[Cloudflare Edge]
+  D --> E([Ship])
+  E --> F[Learn and iterate]
+  F --> A
+```
+
+```bash
+$ whoami
+emerald # full stack engineer, Nigeria
+
+$ cat now.txt
+shipping   -> a SaaS product
+exploring  -> AI agents, edge computing
+learning   -> in public, every day
+
+$ git commit -m "keep shipping"
+```
 
 ## <img src="assets/icons/layers.svg" width="24" align="center"/> Tech Stack
 
@@ -72,7 +98,6 @@ const emerald = {
 | Project | Description | Stack |
 |:--------|:------------|:------|
 | [**Audio-Studio-Ultra**](https://github.com/theemeraldesign/Audio-Studio-Ultra) | Web-based audio studio: extract, trim, enhance and master audio/video in the browser with DSP presets, speed control and ID3 tagging. 100% client-side. | TypeScript · React · Web Audio |
-| [**EMERALD_DESIGNS**](https://github.com/theemeraldesign/EMERALD_DESIGNS) | _Add a one-line pitch here_ | TypeScript · CSS |
 
 > 💡 Tip: a short, concrete sentence per project (with a live demo link) will do more for you than any widget.
 
@@ -80,6 +105,12 @@ const emerald = {
 
 <div align="center">
   <img src="assets/metrics.svg" alt="GitHub metrics" width="100%"/>
+</div>
+
+## <img src="assets/icons/code.svg" width="24" align="center"/> 3D Contribution Calendar
+
+<div align="center">
+  <img src="assets/isocalendar.svg" alt="3D contribution calendar" width="100%"/>
 </div>
 
 ## <img src="assets/icons/fire.svg" width="24" align="center"/> Contribution Streak
@@ -105,7 +136,3 @@ const emerald = {
   <a href="https://linktr.ee/theemeraldesign"><img src="https://img.shields.io/badge/Portfolio-7C3AED?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
   <a href="https://tokenaires.cc/u/theemeraldesign"><img src="https://tokenaires.cc/u/theemeraldesign/badge.svg" alt="Tokenaires"/></a>
 </p>
-
-<div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:7c3aed,100:0ea5e9&height=100&section=footer" width="100%" alt="footer"/>
-</div>
