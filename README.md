@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=0:0ea5e9,50:7c3aed,100:0f172a&height=230&section=header&text=ADEBISI%20ISRAEL&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%C2%B7%20EMERALD%20%C2%B7%20Full%20Stack%20Engineer%20%C2%B7&descSize=20&descAlignY=60" width="100%" alt="Adebisi Israel (Emerald) header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0ea5e9,50:7c3aed,100:0f172a&height=230&section=header&text=ADEBISI%20ISRAEL&fontSize=54&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=%C2%B7%20EMERALD%20%C2%B7%20Full%20Stack%20Engineer%20%C2%B7&descSize=20&descAlignY=60" width="100%" alt="Adebisi Israel (Emerald) header"/>
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=1200&color=38BDF8&center=true&vCenter=true&width=700&height=40&lines=Frontend+%2B+Backend+%2B+Edge+%3D+Shipped;Building+products+people+love;TypeScript+%E2%80%A2+React+%E2%80%A2+Cloudflare+%E2%80%A2+AI;Currently+building+a+SaaS" alt="Typing SVG"/>
@@ -9,7 +9,6 @@
 <br/>
 
 <img src="https://komarev.com/ghpvc/?username=theemeraldesign&label=Profile+views&color=0ea5e9&style=flat-square" alt="Profile views"/>
-<img src="https://img.shields.io/github/followers/theemeraldesign?style=flat-square&logo=github&color=7c3aed" alt="Followers"/>
 <img src="https://img.shields.io/badge/Open%20to-Collaboration-22c55e?style=flat-square" alt="Open to collaboration"/>
 
 </div>
@@ -72,8 +71,8 @@ const emerald = {
 
 | Project | Description | Stack |
 |:--------|:------------|:------|
-| [**Audio-Studio-Ultra**](https://github.com/theemeraldesign/Audio-Studio-Ultra) | _Add a one-line pitch: what it does and why it matters_ | TypeScript · React |
-| [**EMERALD_DESIGNS**](https://github.com/theemeraldesign/EMERALD_DESIGNS) | _Add a one-line pitch: what it does and why it matters_ | TypeScript · CSS |
+| [**Audio-Studio-Ultra**](https://github.com/theemeraldesign/Audio-Studio-Ultra) | Web-based audio studio: extract, trim, enhance and master audio/video in the browser with DSP presets, speed control and ID3 tagging. 100% client-side. | TypeScript · React · Web Audio |
+| [**EMERALD_DESIGNS**](https://github.com/theemeraldesign/EMERALD_DESIGNS) | _Add a one-line pitch here_ | TypeScript · CSS |
 
 > 💡 Tip: a short, concrete sentence per project (with a live demo link) will do more for you than any widget.
 
