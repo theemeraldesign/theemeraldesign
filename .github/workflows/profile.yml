@@ -1,6 +1,8 @@
 name: Profile Build
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
   schedule:
     - cron: "0 */12 * * *"
@@ -98,6 +100,10 @@ jobs:
           plugin_languages_details: percentage
           output_action: none
 
+      - name: Copy GitHub stats card into repository
+        if: env.METRICS_TOKEN != ''
+        run: cp /metrics_renders/assets/metrics.svg assets/metrics.svg
+
       - name: Generate 3D contribution calendar
         if: env.METRICS_TOKEN != ''
         uses: lowlighter/metrics@latest
@@ -110,6 +116,10 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           output_action: none
+
+      - name: Copy 3D contribution calendar into repository
+        if: env.METRICS_TOKEN != ''
+        run: cp /metrics_renders/assets/isocalendar.svg assets/isocalendar.svg
 
       - name: Commit generated files
         run: |
