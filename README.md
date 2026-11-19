@@ -34,29 +34,6 @@ const emerald = {
 - Using AI as a force multiplier in design, code and workflows
 - Always learning in public
 
-## <img src="assets/icons/robot.svg" width="24" align="center"/> How I Build
-
-```mermaid
-flowchart LR
-  A([Idea]) --> B[Design]
-  B --> C[React + TypeScript]
-  C --> D[Cloudflare Edge]
-  D --> E([Ship])
-  E --> F[Learn and iterate]
-  F --> A
-```
-
-```bash
-$ whoami
-emerald # full stack engineer, Nigeria
-
-$ cat now.txt
-shipping   -> a SaaS product
-exploring  -> AI agents, edge computing
-learning   -> in public, every day
-
-$ git commit -m "keep shipping"
-```
 
 ## <img src="assets/icons/layers.svg" width="24" align="center"/> Tech Stack
 
@@ -98,8 +75,6 @@ $ git commit -m "keep shipping"
 | Project | Description | Stack |
 |:--------|:------------|:------|
 | [**Audio-Studio-Ultra**](https://github.com/theemeraldesign/Audio-Studio-Ultra) | Web-based audio studio: extract, trim, enhance and master audio/video in the browser with DSP presets, speed control and ID3 tagging. 100% client-side. | TypeScript · React · Web Audio |
-
-> 💡 Tip: a short, concrete sentence per project (with a live demo link) will do more for you than any widget.
 
 ## <img src="assets/icons/chart.svg" width="24" align="center"/> GitHub Stats
 
