@@ -79,13 +79,7 @@ const emerald = {
 ## <img src="assets/icons/chart.svg" width="24" align="center"/> GitHub Stats
 
 <div align="center">
-  <img src="assets/metrics.svg" alt="GitHub metrics" width="100%"/>
-</div>
-
-## <img src="assets/icons/code.svg" width="24" align="center"/> 3D Contribution Calendar
-
-<div align="center">
-  <img src="assets/isocalendar.svg" alt="3D contribution calendar" width="100%"/>
+  <img src="assets/metrics.svg" alt="GitHub metrics" width="70%"/>
 </div>
 
 ## <img src="assets/icons/fire.svg" width="24" align="center"/> Contribution Streak
