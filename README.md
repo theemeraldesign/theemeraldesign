@@ -72,9 +72,45 @@ const emerald = {
 
 ## <img src="assets/icons/rocket.svg" width="24" align="center"/> Featured Projects
 
-| Project | Description | Stack |
-|:--------|:------------|:------|
-| [**Audio-Studio-Ultra**](https://github.com/theemeraldesign/Audio-Studio-Ultra) | Web-based audio studio: extract, trim, enhance and master audio/video in the browser with DSP presets, speed control and ID3 tagging. 100% client-side. | TypeScript · React · Web Audio |
+### [DevLens](https://github.com/theemeraldesign/devlens) · [Live app ↗](https://devlens.cc.cd)
+
+A secure API development studio for composing HTTP requests, inspecting responses, organising collections and sharing read-only API workspaces. Built with a dedicated Cloudflare-to-Vercel egress gateway, Supabase authentication and SSRF-aware outbound request controls.
+
+<p align="center">
+  <a href="https://raw.githubusercontent.com/theemeraldesign/devlens/main/docs/screenshots/workspace-desktop.png">
+    <img src="https://raw.githubusercontent.com/theemeraldesign/devlens/main/docs/screenshots/workspace-desktop.png" width="100%" alt="DevLens live API workspace"/>
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://devlens.cc.cd"><img src="https://img.shields.io/badge/Live%20product-devlens.cc.cd-e3a15f?style=for-the-badge&logo=cloudflare&logoColor=111827" alt="Open DevLens"/></a>
+  <a href="https://github.com/theemeraldesign/devlens"><img src="https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github" alt="DevLens source code"/></a>
+</p>
+
+| Details | Stack |
+|:--|:--|
+| Product | API request studio, collections, environments, history, response inspector, developer utilities and public sharing |
+| Frontend | React · TypeScript · Vite · Tailwind CSS |
+| Infrastructure | Cloudflare Workers · Vercel · Supabase |
+| Quality | Vitest · Playwright · GitHub Actions |
+
+**Highlights**
+- Seven HTTP methods with query, header, authentication and body controls.
+- Synced collections, environments and redacted request history.
+- JSON, XML and raw response inspection with downloads.
+- Public, read-only collection publishing and import.
+- Signed server-side egress with destination validation and SSRF protections.
+- Responsive desktop and mobile workspace.
+
+**[Open the live product](https://devlens.cc.cd) · [Read the source and documentation](https://github.com/theemeraldesign/devlens)**
+
+---
+
+### [Audio-Studio-Ultra](https://github.com/theemeraldesign/Audio-Studio-Ultra)
+
+Web-based audio studio: extract, trim, enhance and master audio/video in the browser with DSP presets, speed control and ID3 tagging. 100% client-side.
+
+**Stack:** TypeScript · React · Web Audio
 
 ## <img src="assets/icons/chart.svg" width="24" align="center"/> GitHub Stats
 
